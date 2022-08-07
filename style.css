@@ -12,22 +12,167 @@
   --theme-paleblue: hsl(236, 100%, 87%);
 }
 
-*, *::after, *::before {
+* {
   box-sizing: border-box;
   font-family: 'Rubik';
   margin: 0px;
   padding: 0px;
   text-decoration: none;
   list-style: none;
+  color: var(--theme-paleblue);
+}
 
-  font-size: 18px;
+button {
+  background-color: transparent;
+  border: none;
 }
 
 .attribution {
   font-size: 11px;
-  text-align: center;
+  align-self: center;
 }
 
 .attribution a {
+  font-size: 11px;
   color: hsl(228, 45%, 44%);
+}
+
+ol {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 10px;
+}
+
+ol button {
+  padding: 22px;
+  color: var(--theme-desaturatedblue);
+  font-size: 18px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+button:hover {
+  color: white;
+}
+
+button:hover svg {
+  fill: white;
+}
+
+.control-active {
+  color: white;
+}
+
+body {
+  background-color: var(--theme-verydarkblue);
+  display: flex;
+  flex-direction: column;
+  width: 375px;
+  margin: 0px auto;
+}
+
+body > header {
+  width: 335px;
+  margin: 20px 20px 0px 20px;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: var(--theme-darkblue);
+}
+
+body > header img {
+  width: 70px;
+  border: solid 3px white;
+  border-radius: 35px;
+  margin-right: 20px;
+}
+
+p {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--theme-paleblue);
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 300;
+  color: white;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+}
+
+.profile-title {
+  display: flex;
+  align-items: center;
+  background-color: var(--theme-blue);
+  padding: 30px;
+  border-radius: 20px;
+}
+
+section {
+  margin: 25px 20px;
+  border-radius: 20px;
+  position: relative;   /* Stops the absolute positioned svg from overflowing */
+  overflow: hidden;
+}
+
+section > svg {
+  margin: -10px 0px 0px 211px;
+  position: absolute;
+}
+
+#work {
+  background-color: var(--theme-lightred);
+}
+
+#play {
+  background-color: var(--theme-softblue);
+}
+
+#study {
+  background-color: var(--theme-lightred-study);
+}
+
+#exercise {
+  background-color: var(--theme-limegreen);
+}
+
+#social {
+  background-color: var(--theme-violet);
+}
+
+#self-care {
+  background-color: var(--theme-softorange);
+}
+
+.report-stats {
+  margin-top: 40px;
+  background-color: var(--theme-darkblue);
+  padding: 25px 25px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.report-stats:hover {
+  background-color: #34397B;
+}
+
+.report-stats > * {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3px;
+  fill: var(--theme-paleblue);
+}
+
+.stat {
+  font-size: 32px;
+  font-weight: 300;
+  color: white;
 }
