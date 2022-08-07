@@ -110,7 +110,7 @@ function updateTimeframe(timeframe) {
       'monthly': 'Last month',
     }
   
-    // Set the 
+    // Set the timeframe controller color
     keys = Object.keys(previousPrefix)
     for (i = 0; i < keys.length; i++) {
       control = document.querySelector(`#control-${keys[i]} button`)
@@ -118,7 +118,7 @@ function updateTimeframe(timeframe) {
     }
     document.querySelector(`#control-${timeframe} button`).classList.add('control-active')
 
-    // Update each stat card
+    // Update the stats on each card
     for (i = 0; i < timeframes.length; i++) {
       title = timeframes[i]['title']
       stat = timeframes[i]['timeframes'][timeframe]
@@ -130,5 +130,3 @@ function updateTimeframe(timeframe) {
 
 let timeframe = 'weekly'
 updateTimeframe(timeframe)
-
-// You should only update the HTML once - it'll look better and be faster
