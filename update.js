@@ -103,9 +103,6 @@ let timeframes = [
   }
 ]
 
-let timeframe = 'monthly'
-updateTimeframe(timeframe)
-
 function updateTimeframe(timeframe) {
     previousPrefix = {
       'daily': 'Yesterday',
@@ -131,4 +128,7 @@ function updateTimeframe(timeframe) {
     }
 }
 
-// Only update the HTML once - it'll look better and be faster
+let timeframe = 'weekly'
+updateTimeframe(timeframe)
+
+// You should only update the HTML once - it'll look better and be faster

@@ -14,7 +14,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./design/mobile-design.jpg)
+![](./design/desktop-design.jpg)
 
 ### Links
 
@@ -28,5 +29,8 @@ Users should be able to:
 - HTML
 - CSS
 - Vanilla JS
+- Some help from a friend
 
 ### What I learned
+
+
