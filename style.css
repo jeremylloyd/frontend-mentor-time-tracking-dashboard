@@ -19,6 +19,91 @@
   padding: 0px;
   text-decoration: none;
   list-style: none;
+  /* border: white dashed 1px; */
+}
+
+body {
+  background-color: var(--theme-verydarkblue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#report {
+  display: flex;
+  flex-direction: column;
+  margin: 25px;
+  width: 330px;
+}
+
+#report > header {
+  background-color: var(--theme-darkblue);
+}
+
+#report > header img {
+  width: 70px;
+  border: solid 3px white;
+  border-radius: 35px;
+  margin-right: 20px;
+}
+
+#control {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#control ol {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#container-stat > section {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  margin: 25px 0px;
+  border-radius: 20px;
+}
+
+#container-stat svg {
+  fill: var(--theme-paleblue);
+}
+
+#container-stat > section > svg {
+  position: absolute;
+  margin: -10px 20px 0px 0px;
+  align-self: flex-end;
+}
+
+.report-stats {
+  background-color: var(--theme-darkblue);
+  padding: 25px 25px;
+  border-radius: 20px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.report-stats:hover {
+  background-color: #34397B;
+}
+
+.report-stats header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.stat-previous {
   color: var(--theme-paleblue);
 }
 
@@ -37,23 +122,18 @@ button {
   color: hsl(228, 45%, 44%);
 }
 
-ol {
-  display: flex;
-  justify-content: space-between;
-  margin: 0px 10px;
-}
-
 ol button {
   padding: 22px;
   color: var(--theme-desaturatedblue);
   font-size: 18px;
-  width: 100px;
+  /* width: 100px; */
   display: flex;
   justify-content: center;
 }
 
 button:hover {
   color: white;
+  cursor: pointer;
 }
 
 button:hover svg {
@@ -62,29 +142,6 @@ button:hover svg {
 
 .control-active {
   color: white;
-}
-
-body {
-  background-color: var(--theme-verydarkblue);
-  display: flex;
-  flex-direction: column;
-  width: 375px;
-  margin: 0px auto;
-}
-
-body > header {
-  width: 335px;
-  margin: 20px 20px 0px 20px;
-  overflow: hidden;
-  border-radius: 20px;
-  background-color: var(--theme-darkblue);
-}
-
-body > header img {
-  width: 70px;
-  border: solid 3px white;
-  border-radius: 35px;
-  margin-right: 20px;
 }
 
 p {
@@ -106,23 +163,11 @@ h2 {
 }
 
 .profile-title {
+  background-color: var(--theme-blue);
   display: flex;
   align-items: center;
-  background-color: var(--theme-blue);
-  padding: 30px;
+  padding: 30px 25px;
   border-radius: 20px;
-}
-
-section {
-  margin: 25px 20px;
-  border-radius: 20px;
-  position: relative;   /* Stops the absolute positioned svg from overflowing */
-  overflow: hidden;
-}
-
-section > svg {
-  margin: -10px 0px 0px 211px;
-  position: absolute;
 }
 
 #work {
@@ -149,30 +194,50 @@ section > svg {
   background-color: var(--theme-softorange);
 }
 
-.report-stats {
-  margin-top: 40px;
-  background-color: var(--theme-darkblue);
-  padding: 25px 25px;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
-.report-stats:hover {
-  background-color: #34397B;
-}
-
-.report-stats > * {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 3px;
-  fill: var(--theme-paleblue);
-}
-
 .stat {
   font-size: 32px;
   font-weight: 300;
   color: white;
+}
+
+@media screen and (min-width: 600px) {
+  #report {
+    max-width: 1080px;
+    flex-direction: row;
+  }
+
+  #report > header {
+    width: 300px;
+    background-color: var(--theme-darkblue);
+  }
+
+  .profile-title {
+    flex-direction: column;
+  }
+
+  #control ol {
+    flex-direction: column;
+  }
+
+  ol button {
+    width: 100%;
+    justify-content: unset;
+  }
+
+  .report-stats > header {
+    display: flex;
+  }
+
+  .stats {
+    flex-direction: column;
+  }
+
+  #container-stat {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
 }
