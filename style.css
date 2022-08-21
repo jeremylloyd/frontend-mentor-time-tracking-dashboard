@@ -19,7 +19,6 @@
   padding: 0px;
   text-decoration: none;
   list-style: none;
-  /* border: white dashed 1px; */
 }
 
 body {
@@ -67,10 +66,6 @@ body {
   border-radius: 20px;
 }
 
-#container-stat svg {
-  fill: var(--theme-paleblue);
-}
-
 #container-stat > section > svg {
   position: absolute;
   margin: -10px 20px 0px 0px;
@@ -85,6 +80,10 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
+}
+
+.report-stats svg {
+  fill: var(--theme-paleblue);
 }
 
 .report-stats:hover {
@@ -115,6 +114,7 @@ button {
 .attribution {
   font-size: 11px;
   align-self: center;
+  color: var(--theme-desaturatedblue);
 }
 
 .attribution a {
@@ -126,7 +126,6 @@ ol button {
   padding: 22px;
   color: var(--theme-desaturatedblue);
   font-size: 18px;
-  /* width: 100px; */
   display: flex;
   justify-content: center;
 }
@@ -202,39 +201,66 @@ h2 {
 
 @media screen and (min-width: 600px) {
   #report {
-    max-width: 1080px;
-    flex-direction: row;
+    max-width: 1200px;
+    width: unset;
   }
 
-  #report > header {
-    width: 300px;
-    background-color: var(--theme-darkblue);
+  #control {
+    width: 255px;
+    height: 520px;
+    margin: 15px;
+    flex-shrink: 0;
+    position: fixed;
   }
 
   .profile-title {
     flex-direction: column;
+    align-items: flex-start;
+    height: 350px;
+  }
+
+  #report > header img {
+    width: 80px;
+    border-radius: 40px;
+    margin-right: unset;
+    margin-bottom: 40px;
   }
 
   #control ol {
     flex-direction: column;
+    margin: 15px 20px;
   }
 
   ol button {
-    width: 100%;
     justify-content: unset;
+    padding: 10px;
+    width: 100%;
   }
 
-  .report-stats > header {
-    display: flex;
+  .report-stats {
+    margin-top: 45px;
+    height: 200px;
   }
 
   .stats {
     flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .stat {
+    font-size: 48px;
+    margin: 20px 0px 15px;
   }
 
   #container-stat {
     display: flex;
     flex-wrap: wrap;
+    margin-left: 290px;
+  }
+
+  #container-stat > section {
+    margin: 15px;
+    width: 255px;
   }
 
   h1 {
